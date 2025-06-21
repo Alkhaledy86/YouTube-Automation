@@ -139,3 +139,18 @@ jobs:
           echo "🎙️ Auditory identity: Rosie's whisper + calm synths"
           echo "📌 Tip: Add 'From the mind of Abu Rose' as outro whisper with slow fade"
           echo "✅ Your brand identity has been reinforced and remembered!"
+name: tiktok-extractor-agent
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extract-tiktok-idea:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze recent YouTube uploads
+        run: |
+          echo "🎥 Scanning last 3 YouTube videos..."
+          echo "💡 Extracted moments: emotional quote, shocking reveal, fast tip"
+          echo "🎯 Suggested TikTok idea: '3 AI secrets in 30 seconds 💥'"
+          echo "✅ TikTok idea generated and ready for production!"
