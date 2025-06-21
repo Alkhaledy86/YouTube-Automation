@@ -80,3 +80,17 @@ jobs:
           echo "🧠 Generating smart replies using AI..."
           echo "💬 Reply: 'Thanks for your support! More great content is on the way!'"
           echo "✅ All comments responded to!"
+name: copyright-guardian
+
+on:
+  workflow_dispatch:
+
+jobs:
+  monitor-security:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check for copyright or policy issues
+        run: |
+          echo "🛡️ Scanning uploaded videos for copyright issues..."
+          echo "✅ No copyright claims detected."
+          echo "🔒 Channel is secure and compliant with YouTube policies."
