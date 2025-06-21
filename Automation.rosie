@@ -1,1 +1,12 @@
+name: idea-agent
 
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-idea:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate video idea
+        run: |
+          echo "🎯 New idea: A video about how AI creates content with no human input!"
