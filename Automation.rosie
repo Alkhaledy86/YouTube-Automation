@@ -122,3 +122,20 @@ jobs:
           echo "🖼️ Designing a thumbnail using AI..."
           echo "🎨 Colors: Bright with bold text"
           echo "🖼️ Thumbnail created and saved!"
+name: channel-identity-agent
+
+on:
+  workflow_dispatch:
+
+jobs:
+  enhance-identity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze and enhance Abu Rose's brand
+        run: |
+          echo "🧬 Scanning video aesthetics, intros, outros..."
+          echo "🖼️ Signature tone: Emotional, bold, mysterious"
+          echo "🎨 Visual identity: Deep contrast, soft glows, glitchy transitions"
+          echo "🎙️ Auditory identity: Rosie's whisper + calm synths"
+          echo "📌 Tip: Add 'From the mind of Abu Rose' as outro whisper with slow fade"
+          echo "✅ Your brand identity has been reinforced and remembered!"
