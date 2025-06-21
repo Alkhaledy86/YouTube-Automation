@@ -35,3 +35,16 @@ jobs:
         run: |
           echo "🎥 Generating video from script..."
           echo "✅ Video generated successfully!"
+name: youtube-uploader
+
+on:
+  workflow_dispatch:
+
+jobs:
+  upload-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate YouTube upload
+        run: |
+          echo "📤 Uploading video to YouTube..."
+          echo "✅ Video uploaded successfully!"
