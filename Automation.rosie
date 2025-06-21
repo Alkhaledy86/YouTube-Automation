@@ -22,3 +22,16 @@ jobs:
       - name: Turn idea into video script
         run: |
           echo "📝 Script: Today we’ll explore how artificial intelligence can generate video content without human involvement. Let’s break down the process!"
+name: video-generator
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-video:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simulate video generation
+        run: |
+          echo "🎥 Generating video from script..."
+          echo "✅ Video generated successfully!"
