@@ -108,3 +108,17 @@ jobs:
           echo "⏰ Analyzing viewer engagement patterns..."
           echo "📅 Optimal upload time: Tomorrow at 6:00 PM"
           echo "✅ Video scheduled!"
+name: thumbnail-generator
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-thumbnail:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create YouTube thumbnail
+        run: |
+          echo "🖼️ Designing a thumbnail using AI..."
+          echo "🎨 Colors: Bright with bold text"
+          echo "🖼️ Thumbnail created and saved!"
