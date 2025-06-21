@@ -10,3 +10,15 @@ jobs:
       - name: Generate video idea
         run: |
           echo "🎯 New idea: A video about how AI creates content with no human input!"
+name: prompts-agent
+
+on:
+  workflow_dispatch:
+
+jobs:
+  generate-prompt:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Turn idea into video script
+        run: |
+          echo "📝 Script: Today we’ll explore how artificial intelligence can generate video content without human involvement. Let’s break down the process!"
