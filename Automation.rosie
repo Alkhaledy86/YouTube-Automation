@@ -154,3 +154,97 @@ jobs:
           echo "💡 Extracted moments: emotional quote, shocking reveal, fast tip"
           echo "🎯 Suggested TikTok idea: '3 AI secrets in 30 seconds 💥'"
           echo "✅ TikTok idea generated and ready for production!"
+{
+    "name": "Auto-Income Promo Agent",
+    "nodes": [
+        {
+            "parameters": {
+                "interval": 1,
+                "unit": "months"
+            },
+            "name": "Schedule Trigger",
+            "type": "n8n-nodes-base.cron",
+            "typeVersion": 1,
+            "position": [
+                200,
+                300
+            ]
+        },
+        {
+            "parameters": {
+                "functionCode": "\n                const platforms = ['YouTube', 'Instagram', 'TikTok'];\n                const adsChannels = ['Facebook Ads', 'Instagram Ads', 'TikTok Boost'];\n                return [{\n                    task: 'Promote Latest Video Content',\n                    platforms,\n                    adsChannels,\n                    budget: '$10/month'\n                }];\n                "
+            },
+            "name": "Promote Video",
+            "type": "n8n-nodes-base.function",
+            "typeVersion": 1,
+            "position": [
+                400,
+                200
+            ]
+        },
+        {
+            "parameters": {
+                "functionCode": "\n                const incomeSources = ['YouTube', 'Instagram'];\n                const threshold = 50;\n                const detectedIncome = 75; // Simulated\n                const walletPreference = 'Binance Wallet ID: 1080495592';\n\n                if (detectedIncome >= threshold) {\n                    return [{\n                        task: 'Transfer Income',\n                        to: walletPreference,\n                        amount: detectedIncome\n                    }];\n                } else {\n                    return [{ message: 'Threshold not met. No transfer done.' }];\n                }\n                "
+            },
+            "name": "Reverse Income Transfer",
+            "type": "n8n-nodes-base.function",
+            "typeVersion": 1,
+            "position": [
+                400,
+                400
+            ]
+        },
+        {
+            "parameters": {
+                "functionCode": "\n                return [{\n                    notification: 'Summary: Ads launched and income transferred (if threshold met).'\n                }];\n                "
+            },
+            "name": "Notify User",
+            "type": "n8n-nodes-base.function",
+            "typeVersion": 1,
+            "position": [
+                600,
+                300
+            ]
+        }
+    ],
+    "connections": {
+        "Schedule Trigger": {
+            "main": [
+                [
+                    {
+                        "node": "Promote Video",
+                        "type": "main",
+                        "index": 0
+                    },
+                    {
+                        "node": "Reverse Income Transfer",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Promote Video": {
+            "main": [
+                [
+                    {
+                        "node": "Notify User",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        },
+        "Reverse Income Transfer": {
+            "main": [
+                [
+                    {
+                        "node": "Notify User",
+                        "type": "main",
+                        "index": 0
+                    }
+                ]
+            ]
+        }
+    }
+}
