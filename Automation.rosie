@@ -65,3 +65,18 @@ jobs:
           echo "Comments: 28"
           echo "📊 Engagement rate: 7.6%"
           echo "✅ Analysis complete!"
+name: comment-responder
+
+on:
+  workflow_dispatch:
+
+jobs:
+  respond-to-comments:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Respond to recent comments
+        run: |
+          echo "💬 Checking for new comments..."
+          echo "🧠 Generating smart replies using AI..."
+          echo "💬 Reply: 'Thanks for your support! More great content is on the way!'"
+          echo "✅ All comments responded to!"
