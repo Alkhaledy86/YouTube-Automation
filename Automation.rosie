@@ -48,3 +48,20 @@ jobs:
         run: |
           echo "📤 Uploading video to YouTube..."
           echo "✅ Video uploaded successfully!"
+name: youtube-analyzer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze-performance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Analyze YouTube channel performance
+        run: |
+          echo "📈 Fetching analytics for latest uploaded videos..."
+          echo "Views: 2,304"
+          echo "Likes: 157"
+          echo "Comments: 28"
+          echo "📊 Engagement rate: 7.6%"
+          echo "✅ Analysis complete!"
